@@ -9,7 +9,7 @@ module WithContext exposing
 
 {-| Cleaner, hack-free way to pass contexts to Elm view functions.
 
-    Simple port of arowM/elm-html-with-context to make it work with rtfeldman/elm-css.
+Simple port of [arowM/elm-html-with-context](https://package.elm-lang.org/packages/arowM/elm-html-with-context/latest/) to make it work with [rtfeldman/elm-css](https://package.elm-lang.org/packages/rtfeldman/elm-css/latest/).
 
 
 # Types
@@ -41,9 +41,8 @@ import Html.Styled.Lazy as Html
 
 {-| An opaque type for representing `Html` with a context.
 
-    A `Node` is a wrapper for "a function that can take a list of `Html` functions, and return `Html` value, with a context".
-
-    A `Leaf` is a wrapper for "a `Html` value, with a context".
+  - A `Node` is a wrapper for "a function that can take a list of functions that take a context and return a `Html` value, and return a function that takes a context and returns a `Html` value".
+  - A `Leaf` is a wrapper for "a function that takes a context, and returns a `Html` value".
 
 -}
 type WithContext context msg
@@ -77,7 +76,7 @@ node =
     Node
 
 
-{-| Text node.
+{-| Text node. We have to explicitly define this, because it's the only `Html` function that doesn't take a `List Html msg` as an argument.
 -}
 text : (context -> String) -> WithContext context msg
 text func =

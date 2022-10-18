@@ -1,4 +1,4 @@
-module Lazy exposing
+module WithContext.Lazy exposing
     ( lazy
     , lazy2
     , lazy3
