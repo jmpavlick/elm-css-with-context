@@ -72,13 +72,27 @@ toHtml context withContext =
 
 {-| Custom node.
 -}
+node : (context -> List (Html msg) -> Html msg) -> List (WithContext context msg) -> WithContext context msg
 node =
-    Debug.todo ""
+    Node
 
 
-text =
-    Debug.todo ""
+{-| Text node.
+-}
+text : (context -> String) -> WithContext context msg
+text func =
+    func >> Html.text |> Leaf
 
 
-lift =
-    Debug.todo ""
+{-| This function is supposed to be used with functions in `WithContext.Lazy`.
+Please see [actual use case](https://github.com/arowM/elm-css-modules-helper/tree/master/examples/real-world) for detail.
+-}
+lift : (context -> subContext) -> WithContext subContext msg -> WithContext context msg
+lift func withContext =
+    case withContext of
+        Node subcontextFunc children ->
+            List.map (lift func) children
+                |> Node (func >> subcontextFunc)
+
+        Leaf subcontextFunc ->
+            func >> subcontextFunc |> Leaf
