@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "elm-go src/WithContext.elm --no-server",
     "preview": "elm-doc-preview"
   },
   "repository": {
@@ -19,8 +18,7 @@
   "homepage": "https://github.com/jmpavlick/elm-css-with-context#readme",
   "dependencies": {
     "elm": "^0.19.1-5",
-    "elm-doc-preview": "^5.0.5",
-    "elm-go": "^5.0.17"
+    "elm-doc-preview": "^5.0.5"
   },
   "devDependencies": {
     "elm-format": "^0.8.5"
