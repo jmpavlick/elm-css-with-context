@@ -1,0 +1,19 @@
+{
+    "type": "package",
+    "name": "jmpavlick/elm-css-with-context",
+    "summary": "A port of arowM/elm-html-with-context, for rtfeldman/elm-css",
+    "exposed-modules": [
+        "WithContext",
+        "WithContext.Lazy"
+    ],
+    "license": "MIT",
+    "version": "1.0.0",
+    "elm-version": "0.19.0 <= v <= 0.20.0",
+    "dependencies": {
+        "elm/core": "1.0.0 <= v <= 2.0.0",
+        "elm/html": "1.0.0 <= v <= 2.0.0",
+        "rtfeldman/elm-css": "18.0.0 <= v <= 19.0.0"
+    },
+    "test-dependencies": {
+    }
+}
