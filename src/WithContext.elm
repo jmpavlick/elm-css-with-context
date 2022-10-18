@@ -9,7 +9,7 @@ module WithContext exposing
 
 {-| Cleaner, hack-free way to pass contexts to Elm view functions.
 
-    Simple port of arowM/elm-html-with-context to make it work with rtfeldman/elm-css
+    Simple port of arowM/elm-html-with-context to make it work with rtfeldman/elm-css.
 
 
 # Types
