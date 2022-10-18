@@ -33,7 +33,7 @@ lazy func a =
         |> WithContext.fromHtml
 
 
-{-| Same as lazy but checks on two arguments.
+{-| Same as `lazy`, but checks on two arguments.
 -}
 lazy2 : (context -> a -> b -> Html msg) -> a -> b -> WithContext context msg
 lazy2 func a b =
@@ -41,7 +41,7 @@ lazy2 func a b =
         |> WithContext.fromHtml
 
 
-{-| Same as lazy but checks on three arguments.
+{-| Same as `lazy`, but checks on three arguments.
 -}
 lazy3 : (context -> a -> b -> c -> Html msg) -> a -> b -> c -> WithContext context msg
 lazy3 func a b c =
@@ -49,7 +49,7 @@ lazy3 func a b c =
         |> WithContext.fromHtml
 
 
-{-| Same as lazy but checks on four arguments.
+{-| Same as `lazy`, but checks on four arguments.
 -}
 lazy4 : (context -> a -> b -> c -> d -> Html msg) -> a -> b -> c -> d -> WithContext context msg
 lazy4 func a b c d =
@@ -57,7 +57,7 @@ lazy4 func a b c d =
         |> WithContext.fromHtml
 
 
-{-| Same as lazy but checks on five arguments.
+{-| Same as `lazy`, but checks on five arguments.
 -}
 lazy5 : (context -> a -> b -> c -> d -> e -> Html msg) -> a -> b -> c -> d -> e -> WithContext context msg
 lazy5 func a b c d e =
@@ -65,7 +65,7 @@ lazy5 func a b c d e =
         |> WithContext.fromHtml
 
 
-{-| Same as lazy but checks on six arguments.
+{-| Same as `lazy`, but checks on six arguments.
 -}
 lazy6 : (context -> a -> b -> c -> d -> e -> f -> Html msg) -> a -> b -> c -> d -> e -> f -> WithContext context msg
 lazy6 func a b c d e f =
